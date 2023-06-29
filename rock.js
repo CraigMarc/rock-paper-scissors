@@ -22,7 +22,7 @@ function playRound(playerSelection, computerSelection) {
         playerWinner = playerWinner + 1
         return "You Win! " + playerSelection + " beats " + computerSelection
     }
-    if (playerSelection == computerSelection){
+    if (playerSelection.toUpperCase() == computerSelection.toUpperCase()){
         return "Tie " + playerSelection + " same as " + computerSelection
     }
     else { 
@@ -44,10 +44,16 @@ if (/paper/i.test(playerSelection) == false  && /scissors/i.test(playerSelection
 
 console.log(playRound(playerSelection, getComputerChoice()))
     }
+    if (playerWinner == computerWinner) {
+        console.log("Tie!")
+    }
+
 if (playerWinner > computerWinner) {
     console.log("You Win!")
 }
-else console.log("You Lose!")
+if (playerWinner < computerWinner) {
+    console.log("You Lose!")
+}
 
 
 }
