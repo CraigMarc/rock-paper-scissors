@@ -40,20 +40,12 @@ function game() {
 console.log(playRound(playerSelection, getComputerChoice()))
     }
 if (playerWinner > computerWinner) {
-    return "You Win!"
+    console.log("You Win!")
 }
-else return "You Lose!"
+else console.log("You Lose!")
 
 
 }
+game()
 
 
-
-/*
-  const playerSelection = "Paper";
-  const computerSelection = getComputerChoice()*/
-  /*
-  console.log(playRound(playerSelection, computerSelection));
-  console.log(playerSelection)
-  console.log(computerSelection)
-  */
