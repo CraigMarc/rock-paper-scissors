@@ -58,11 +58,20 @@ if (playerWinner < computerWinner) {
 
 }
 
-const btn = document.querySelector('#btn');
-
+const btn = document.querySelectorAll('#btn');
+/*
 btn.addEventListener('click', function (e) {
-    console.log(e);
-    
+    let fired_button = btn.value
+console.log(fired_button)
+  });*/
+
+  btn.forEach((button) => {
+
+    button.addEventListener('click', () => {
+     console.log(button.value)
+     console.log(playRound(button.value, getComputerChoice()))
+    });
   });
+
 
 
