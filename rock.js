@@ -49,12 +49,7 @@ console.log(playRound(playerSelection, getComputerChoice()))
         console.log("Tie!")
     }
 
-if (playerWinner > computerWinner) {
-    console.log("You Win!")
-}
-if (playerWinner < computerWinner) {
-    console.log("You Lose!")
-}
+
 
 
 }
@@ -73,6 +68,30 @@ const btn = document.querySelectorAll('#btn');
      game.textContent = gameResult;
 
      container.appendChild(game);
+
+console.log(computerWinner)
+     if (playerWinner == 5) {
+        console.log("You Win!")
+
+        const container = document.querySelector('#container');
+     const gameWinner = document.createElement('h3');
+     gameWinner.classList.add('gameWinner');
+     gameWinner.textContent = "You Win!";
+     container.appendChild(gameWinner);
+     playerWinner = 0
+     computerWinner = 0
+    }
+    if (computerWinner == 5) {
+        console.log("You Lose!")
+
+        const container = document.querySelector('#container');
+        const gameLoser = document.createElement('h3');
+     gameLoser.classList.add('gameLoser');
+     gameLoser.textContent = "You Win!";
+     container.appendChild(gameLoser);
+     playerWinner = 0
+     computerWinner = 0
+    }
     });
   });
 
