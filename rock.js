@@ -2,6 +2,7 @@ let playerWinner = 0
 let computerWinner = 0
 
 
+
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * (2 - 0 + 1) + 0)
     let randomArray = ["Rock", "Paper", "Scissors"]
@@ -59,19 +60,22 @@ if (playerWinner < computerWinner) {
 }
 
 const btn = document.querySelectorAll('#btn');
-/*
-btn.addEventListener('click', function (e) {
-    let fired_button = btn.value
-console.log(fired_button)
-  });*/
+
 
   btn.forEach((button) => {
 
     button.addEventListener('click', () => {
      console.log(button.value)
-     console.log(playRound(button.value, getComputerChoice()))
+     let gameResult = (playRound(button.value, getComputerChoice()))
+     const container = document.querySelector('#container');
+     const game = document.createElement('p');
+     game.classList.add('game');
+     game.textContent = gameResult;
+
+     container.appendChild(game);
     });
   });
 
+ 
 
 
