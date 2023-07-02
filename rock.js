@@ -32,27 +32,9 @@ function playRound(playerSelection, computerSelection) {
     }
 
   }
-   
-function game() {
-
-   /* for (let i = 0; i < 5; i++){*/
-
-    let playerSelection = prompt("Enter Rock, Paper or Scissors") 
-    
-if (/paper/i.test(playerSelection) == false  && /scissors/i.test(playerSelection) == false && /rock/i.test(playerSelection) == false) {
-    playerSelection = prompt("Invalid Entry: Enter Rock, Paper or Scissors")
- /*}*/
-
-console.log(playRound(playerSelection, getComputerChoice()))
-    }
-    if (playerWinner == computerWinner) {
-        console.log("Tie!")
-    }
+ 
 
 
-
-
-}
 
 const btn = document.querySelectorAll('#btn');
 
@@ -60,14 +42,13 @@ const btn = document.querySelectorAll('#btn');
   btn.forEach((button) => {
 
     button.addEventListener('click', () => {
-     console.log(button.value)
+     
      let gameResult = (playRound(button.value, getComputerChoice()))
      const container = document.querySelector('#container');
      const game = document.createElement('p');
      game.classList.add('game');
      game.textContent = gameResult;
-
-     container.appendChild(game);
+    container.appendChild(game);
 
 console.log(computerWinner)
      if (playerWinner == 5) {
