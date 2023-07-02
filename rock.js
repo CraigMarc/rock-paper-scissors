@@ -68,7 +68,7 @@ console.log(computerWinner)
         const container = document.querySelector('#container');
         const gameLoser = document.createElement('h3');
      gameLoser.classList.add('gameLoser');
-     gameLoser.textContent = "You Win!";
+     gameLoser.textContent = "You Lose!";
      container.appendChild(gameLoser);
      playerWinner = 0
      computerWinner = 0
